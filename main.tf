@@ -1,7 +1,7 @@
 provider "aws" {
   access_key = "AKIARI2KGH5WZNBIRSOT"
   secret_key = "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"
-  region = "us-west-1"
+  region = "us-east-2"
 }
 
 
@@ -38,12 +38,12 @@ resource "aws_security_group" "security_port" {
 }
 
 resource "aws_instance" "myFirstInstance" {
-  ami           = "ami-09625adacc474a7b4"
-  key_name = "keypair1"
+  ami           = "ami-0fa49cc9dc8d62c84"
+  key_name = "keypair2"
   instance_type = "t2.micro"
   security_groups= [ "security_port"]
   tags= {
-    Name = "instance1"
+    Name = "instance2"
   }
 }
 
